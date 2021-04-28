@@ -1,17 +1,30 @@
-Template Singularity container
+tidyverse and Biostrings Singularity container
 ================
 Sylvain Schmitt
 April 28, 2021
 
-**Bionformatics package Template**
+**R packages tidyverse and Biostrings**
 
-Template is a set of utilities that Blah.
+The `tidyverse` is an opinionated collection of R packages designed for
+data science. All packages share an underlying design philosophy,
+grammar, and data structures.
 
-Template Version: X.X.X
+`tidyverse` Version: X.X.X
 
-\[URL\]
+\[<https://www.tidyverse.org/>\]
 
-Singularity container based on the recipe: Singularity
+`Biostrings` is a memory efficient string containers, string matching
+algorithms, and other utilities, for fast manipulation of large
+biological sequences or sets of sequences.
+
+`Biostrings` Version: X.X.X
+
+\[<https://bioconductor.org/packages/release/bioc/html/Biostrings.html>\]
+
+Singularity container based on the recipe:
+[`Singularity`](https://github.com/sylvainschmitt/singularity-tidyverse-Biostrings/blob/main/Singularity)
+and
+[`environment.yml`](https://github.com/sylvainschmitt/singularity-tidyverse-Biostrings/blob/main/environment.yml)
 
 Package installation using Miniconda3 V4.7.12
 
@@ -24,18 +37,18 @@ on the registry using
 **build**:
 
 ``` bash
-sudo singularity build Singularity img.sif
+sudo singularity build img.sif Singularity
 ```
 
 **pull**:
 
 ``` bash
-singularity pull https://github.com/sylvainschmitt/singularity-template/releases/download/0.0.4/sylvainschmitt-singularity-template.latest.sif
+singularity pull https://github.com/sylvainschmitt/singularity-template/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif
 ```
 
 **snakemake**:
 
 ``` python
     singularity: 
-        "https://github.com/sylvainschmitt/singularity-template/releases/download/0.0.4/sylvainschmitt-singularity-template.latest.sif"
+        "https://github.com/sylvainschmitt/singularity-template/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif"
 ```

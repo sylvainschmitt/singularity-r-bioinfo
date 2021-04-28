@@ -1,2 +1,2 @@
-# Singularity-template 0.0.9001
+# singularity-tidyverse-Biostrings 0.0.1
 * init
