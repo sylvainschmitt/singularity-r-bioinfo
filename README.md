@@ -23,10 +23,6 @@ biological sequences or sets of sequences.
 
 Singularity container based on the recipe:
 [`Singularity`](https://github.com/sylvainschmitt/singularity-tidyverse-Biostrings/blob/main/Singularity)
-and
-[`environment.yml`](https://github.com/sylvainschmitt/singularity-tidyverse-Biostrings/blob/main/environment.yml)
-
-Package installation using Miniconda3 V4.7.12
 
 Image singularity (V\>=3.3) is automatically test and built and pushed
 on the registry using
@@ -37,18 +33,18 @@ on the registry using
 **build**:
 
 ``` bash
-sudo singularity build img.sif Singularity
+sudo singularity build Biostrings.sif Singularity
 ```
 
 **pull**:
 
 ``` bash
-singularity pull https://github.com/sylvainschmitt/singularity-template/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif
+singularity pull https://github.com/sylvainschmitt/singularity-tidyverse-Biostrings/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif
 ```
 
 **snakemake**:
 
 ``` python
     singularity: 
-        "https://github.com/sylvainschmitt/singularity-template/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif"
+        "https://github.com/sylvainschmitt/singularity-tidyverse-Biostrings/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif"
 ```

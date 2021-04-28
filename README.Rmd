@@ -47,13 +47,13 @@ sudo singularity build Biostrings.sif Singularity
 **pull**:
 
 ```{bash, echo=T, eval=F}
-singularity pull https://github.com/sylvainschmitt/singularity-template/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif
+singularity pull https://github.com/sylvainschmitt/singularity-tidyverse-Biostrings/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif
 ```
 
 **snakemake**:
 
 ```{python, echo=T, eval=F}
     singularity: 
-        "https://github.com/sylvainschmitt/singularity-template/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif"
+        "https://github.com/sylvainschmitt/singularity-tidyverse-Biostrings/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif"
 ```
 
