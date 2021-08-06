@@ -1,15 +1,22 @@
-tidyverse and Biostrings Singularity container
+R and bioinformatic packages Singularity container
 ================
 Sylvain Schmitt
-April 28, 2021
+August 6, 2021
 
-**R packages tidyverse and Biostrings**
+**R and bioinformatic packages**
+
+This container includes:
+
+  - `R` 4.0.3
+  - `tidyverse` 1.3.0
+  - `Biostrings` 2.58.0
+  - `vcfR` 1.12.0
+  - `vroom` 1.3.2
+  - `csv2sql` 0.1.0
 
 The `tidyverse` is an opinionated collection of R packages designed for
 data science. All packages share an underlying design philosophy,
 grammar, and data structures.
-
-`tidyverse` Version: X.X.X
 
 \[<https://www.tidyverse.org/>\]
 
@@ -17,12 +24,23 @@ grammar, and data structures.
 algorithms, and other utilities, for fast manipulation of large
 biological sequences or sets of sequences.
 
-`Biostrings` Version: X.X.X
-
 \[<https://bioconductor.org/packages/release/bioc/html/Biostrings.html>\]
 
+The R package `vcfR` is a set of tools designed to read, write,
+manipulate and analyze VCF data.
+
+\[<https://knausb.github.io/vcfR_documentation/>\]
+
+`vroom` is the fastest delimited reader for R, 1.23 GB/sec.
+
+\[<https://vroom.r-lib.org/>\]
+
+The `csv2sql` is a wrapper to convert csv files to sql database.
+
+\[<https://github.com/kcf-jackson/csv2sql>\]
+
 Singularity container based on the recipe:
-[`Singularity`](https://github.com/sylvainschmitt/singularity-tidyverse-Biostrings/blob/main/Singularity)
+[`Singularity`](https://github.com/sylvainschmitt/singularity-r-bioinfo/blob/main/Singularity)
 
 Image singularity (V\>=3.3) is automatically test and built and pushed
 on the registry using
@@ -39,12 +57,12 @@ sudo singularity build Biostrings.sif Singularity
 **pull**:
 
 ``` bash
-singularity pull https://github.com/sylvainschmitt/singularity-tidyverse-Biostrings/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif
+singularity pull https://github.com/sylvainschmitt/singularity-r-bioinfo/releases/download/0.0.1/sylvainschmitt-singularity-r-bioinfo.latest.sif
 ```
 
 **snakemake**:
 
 ``` python
     singularity: 
-        "https://github.com/sylvainschmitt/singularity-tidyverse-Biostrings/releases/download/0.0.1/sylvainschmitt-singularity-tidyverse-Biostrings.latest.sif"
+        "https://github.com/sylvainschmitt/singularity-r-bioinfo/releases/download/0.0.1/sylvainschmitt-singularity-r-bioinfo.latest.sif"
 ```
