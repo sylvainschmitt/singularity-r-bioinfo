@@ -13,6 +13,7 @@ This container includes:
   - `vcfR` 1.12.0
   - `vroom` 1.3.2
   - `csv2sql` 0.1.0
+  - `reshape2` 1.4.4
 
 The `tidyverse` is an opinionated collection of R packages designed for
 data science. All packages share an underlying design philosophy,
@@ -39,6 +40,11 @@ The `csv2sql` is a wrapper to convert csv files to sql database.
 
 \[<https://github.com/kcf-jackson/csv2sql>\]
 
+`reshape2` is an R package written by Hadley Wickham that makes it easy
+to transform data between wide and long formats.
+
+\[<https://seananderson.ca/2013/10/19/reshape/>\]
+
 Singularity container based on the recipe:
 [`Singularity`](https://github.com/sylvainschmitt/singularity-r-bioinfo/blob/main/Singularity)
 
@@ -57,12 +63,12 @@ sudo singularity build Biostrings.sif Singularity
 **pull**:
 
 ``` bash
-singularity pull https://github.com/sylvainschmitt/singularity-r-bioinfo/releases/download/0.0.1/sylvainschmitt-singularity-r-bioinfo.latest.sif
+singularity pull https://github.com/sylvainschmitt/singularity-r-bioinfo/releases/download/0.0.3/sylvainschmitt-singularity-r-bioinfo.latest.sif
 ```
 
 **snakemake**:
 
 ``` python
     singularity: 
-        "https://github.com/sylvainschmitt/singularity-r-bioinfo/releases/download/0.0.1/sylvainschmitt-singularity-r-bioinfo.latest.sif"
+        "https://github.com/sylvainschmitt/singularity-r-bioinfo/releases/download/0.0.3/sylvainschmitt-singularity-r-bioinfo.latest.sif"
 ```
