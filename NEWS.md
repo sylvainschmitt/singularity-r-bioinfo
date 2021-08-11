@@ -1,3 +1,6 @@
+# singularity-r-bioinfo 0.0.3
+* adding reshape2
+
 # singularity-r-bioinfo 0.0.2
 * adding vcfR, vroom, and csv2sql for snakemake pipelines
 
