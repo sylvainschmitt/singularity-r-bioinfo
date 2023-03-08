@@ -1,3 +1,6 @@
+# singularity-r-bioinfo 0.0.4
+* adding knitr', 'rmarkdown', 'bookdown',  'viridis', 'bayesplot', 'GGally'
+
 # singularity-r-bioinfo 0.0.3
 * adding reshape2
 

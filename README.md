@@ -7,13 +7,19 @@ August 6, 2021
 
 This container includes:
 
-  - `R` 4.0.3
-  - `tidyverse` 1.3.0
-  - `Biostrings` 2.58.0
-  - `vcfR` 1.12.0
-  - `vroom` 1.3.2
-  - `csv2sql` 0.1.0
-  - `reshape2` 1.4.4
+- `R` 4.0.3
+- `tidyverse` 1.3.0
+- `Biostrings` 2.58.0
+- `vcfR` 1.12.0
+- `vroom` 1.3.2
+- `csv2sql` 0.1.0
+- `reshape2` 1.4.4
+- `rmarkdown` 2.1.8
+- `bookdown` 0.29
+- `knitr` 1.4.0
+- `bayesplot` 1.9.0
+- `GGally` 2.1.2
+- `viridis` 0.6.2
 
 The `tidyverse` is an opinionated collection of R packages designed for
 data science. All packages share an underlying design philosophy,
@@ -45,6 +51,48 @@ to transform data between wide and long formats.
 
 \[<https://seananderson.ca/2013/10/19/reshape/>\]
 
+`rmarkdonw` documents are fully reproducible. Use a productive notebook
+interface to weave together narrative text and code to produce elegantly
+formatted output. Use multiple languages including R, Python, and SQL.
+
+\[<https://rmarkdown.rstudio.com/>\]
+
+The `bookdown` package is an open-source R package that facilitates
+writing books and long-form articles/reports with R Markdown.
+
+\[<https://bookdown.org/>\]
+
+Inspired by Sweave, the `knitr` package was designed to be a transparent
+engine for dynamic report generation with R, and combine features in
+other add-on packages into one package (knitr ≈ Sweave + cacheSweave +
+pgfSweave + weaver + animation::saveLatex() + R2HTML::RweaveHTML() +
+highlight::HighlightWeaveLatex() + 0.2 \* brew + 0.1 \*
+SweaveListingUtils + more).
+
+\[<https://yihui.org/knitr/>\]
+
+`bayesplot` is an R package providing an extensive library of plotting
+functions for use after fitting Bayesian models (typically with MCMC).
+The plots created by bayesplot are ggplot objects, which means that
+after a plot is created it can be further customized using various
+functions from the ggplot2 package.
+
+\[<http://mc-stan.org/bayesplot/>\]
+
+`GGally` extends ggplot2 by adding several functions to reduce the
+complexity of combining geoms with transformed data. Some of these
+functions include a pairwise plot matrix, a scatterplot plot matrix, a
+parallel coordinates plot, a survival plot, and several functions to
+plot networks.
+
+\[<https://ggobi.github.io/ggally/>\]
+
+`viridis` color scales in makes plots that are pretty, better represents
+your data, easier to read by those with colorblindness, and print well
+in gray scale.
+
+\[<https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html>\]
+
 Singularity container based on the recipe:
 [`Singularity`](https://github.com/sylvainschmitt/singularity-r-bioinfo/blob/main/Singularity)
 
@@ -57,7 +105,7 @@ on the registry using
 **build**:
 
 ``` bash
-sudo singularity build Biostrings.sif Singularity
+sudo singularity build r-bioinfo.sif Singularity
 ```
 
 **pull**:
