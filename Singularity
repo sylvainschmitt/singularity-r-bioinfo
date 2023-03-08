@@ -6,6 +6,9 @@ From: tpall/singularity-r:4.0.3
 
 %help
   This will run tidyverse and Biostrings
+  
+%files
+  install.R /install.R
 
 %post
   apt-get update -qq \
@@ -17,7 +20,6 @@ From: tpall/singularity-r:4.0.3
     libgdal-dev \
     libgsl-dev \
     libnode-dev \
-    && Rscript -e "install.packages(c('tidyverse', 'BiocManager', 'vroom', 'vcfR', 'devtools', 'reshape2'), dependencies = c('Depends', 'Imports', 'LinkingTo'))" \
-    && Rscript -e "BiocManager::install('Biostrings')" \
-    && Rscript -e "devtools::install_github('kcf-jackson/csv2sql')" \
-    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
+    && Rscript install.R \
+    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
+    && rm install.R
